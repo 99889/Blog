@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %} Create new account {% endblock %}
+
+
+{% block body_block %}
+{% if registered %}
+<div class="alert alert-success">
+    Account created successfully <a href="">login here</a>
+</div>
+{% else %}
+
+<h2> Create new account </h2>
+<form method="post">
+    {{ form }}
+    <button type="submit" class="btn btn-success btn-sm">Create Account</button>
+</form>
+<br>
+
+<p>Already have an account <a href="">Login here</a></p>
+{% endif %}
+{% endblock %}
