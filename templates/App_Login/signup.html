@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block title %} Create new account {% endblock %}
 
 
@@ -11,7 +12,12 @@
 
 <h2> Create new account </h2>
 <form method="post">
-    {{ form }}
+    {% csrf_token %}
+    {{ form | crispy }}
+
+    {% csrf_token %}
+
+    
     <button type="submit" class="btn btn-success btn-sm">Create Account</button>
 </form>
 <br>
