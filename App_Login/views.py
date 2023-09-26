@@ -4,7 +4,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.shortcuts import HttpResponseRedirect
 from django.urls import reverse
 # Create your views here.
-def sign_up(request):
+def signup(request):
     form = UserCreationForm()
     registered = False
     if request.method == "POST":
